@@ -7,9 +7,9 @@ var model = {
             tag: "button",
             value: "Click me now!",
             onClick: function() {
-                editBoxName.value = editBoxName.value + " Hello World!"
-                button1.disabled = true;
-                inputs[1].value = "My Donner!";
+                this.editBoxName.value = this.editBoxName.value + " Hello World!"
+                this.button1.disabled = true;
+                this.inputs[1].value = "My Donner!";
             } 
         },
         paragraph: {

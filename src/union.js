@@ -45,7 +45,7 @@ function loadObject(dom, obj, path) {
         else if (typeof(obj[key]) == 'function') {
             //If key begins with 'on' then we have an event.
             if (key.substring(0, 2) == 'on') {
-                dom.addEventListener(key.substring(2).toLowerCase(), Function(path + '.' + key + '.call(' + path + ');'));
+                dom.addEventListener(key.substring(2).toLowerCase(), Function(path + '.' + key + '.call(topLevel.body);'));
             }
             else
             {
