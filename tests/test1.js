@@ -9,13 +9,13 @@ var model = {
         },
         user: {
             tag: "input",
-            value: "Francois"
+            value: ""
         },
         button1: {
             tag: "button",
             value: "Click me",
             onclick: function() {
-                alert('Hello ' + this.user.value);
+                alert('Hello World! - ' + this.user.value);
             }
         }
     }
