@@ -7,9 +7,10 @@ var model = {
             tag: "button",
             value: "Click me now!",
             onClick: function() {
-                this.editBoxName.value = this.editBoxName.value + " Hello World!"
-                this.button1.disabled = true;
+                this.editBoxName.value = "Hello World!";
+                //this.button1.disabled = true;
                 this.inputs[1].value = "My Donner!";
+                this.inputs.push({tag: "input", value: this.editBoxName.value});                
             } 
         },
         paragraph: {
@@ -29,7 +30,7 @@ var model = {
             value: "OKAY THEN"
         },{
             tag: "button",
-            value: "Schweete"
+            value: "Schweeter"
         }]
     }
 }

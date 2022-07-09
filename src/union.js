@@ -7,18 +7,36 @@ var proxyHandler = {
         if (typeof target[key] === 'object' && target[key] !== null) {
           return new Proxy(target[key], proxyHandler)
         } else {
-          return target[key];
+            if (target.domKey) {
+                var domObj = document.getElementById(target.domKey);
+                if (domObj[key]) {
+                    return domObj[key];
+                }
+                if (key == 'value') {
+                    return domObj.innerText;
+                }
+            }
+            return target[key];
         }
     },
     set(obj, prop, value) {
+        //Set actual VAL
+        obj[prop] = value;
         //Updating existing object.
         if (obj.domKey) {
-            if (prop == 'value') {
-                document.getElementById(obj.domKey).innerText = value;
+            if (Array.isArray(obj)) {
+                var domObj = document.getElementById(obj.domKey);
+                domObj.innerText = '';
+                loadObject(domObj, obj, obj.domKey);
+                return true;
             }
             else
             {
+                if (prop == 'value') {
+                    document.getElementById(obj.domKey).innerText = value;
+                }
                 document.getElementById(obj.domKey)[prop] = value;
+                return true;
             }
         }
     }
@@ -52,7 +70,7 @@ function loadObject(dom, obj, path) {
                 var thisItem = document.createElement(tag);
                 thisItem.id = path + '.' + key;
                 dom.appendChild(thisItem);
-                loadObject(thisItem, obj[key], path + '.childNodes.' + key);
+                loadObject(thisItem, obj[key], path + '.' + key);
             }
             else
             {
@@ -77,14 +95,14 @@ function loadObject(dom, obj, path) {
                 //else we have a function we have to call in order to get the value to assign.
                 dom[key] = obj[key];
             }            
-        }
-        else if (key == 'value') {
-            dom.innerText = obj[key]
-        }
-        else if (key != 'tag')
+        }        
+        else 
         {
+            if (key == 'value') {
+                dom.innerText = obj[key]
+            }
             dom[key] = obj[key];
-        }
+        }     
     }
 }
 
