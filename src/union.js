@@ -1,8 +1,32 @@
 //Reference to Object used to build DOM.
 var topLevel;
 
+//Used for Event Handling.
+var proxyHandler = {
+    get(target, key) {
+        if (typeof target[key] === 'object' && target[key] !== null) {
+          return new Proxy(target[key], proxyHandler)
+        } else {
+          return target[key];
+        }
+    },
+    set(obj, prop, value) {
+        //Updating existing object.
+        if (obj.domKey) {
+            if (prop == 'value') {
+                document.getElementById(obj.domKey).innerText = value;
+            }
+            else
+            {
+                document.getElementById(obj.domKey)[prop] = value;
+            }
+        }
+    }
+}
+
 function buildPage(obj) {
-    topLevel = obj;
+    topLevel = new Proxy(obj, proxyHandler);
+
     //Head
     if (obj.head) {
         //Transfer Attributes
@@ -18,14 +42,15 @@ function buildPage(obj) {
 }
 
 function loadObject(dom, obj, path) {
+    obj.domKey = path;
     for (const key in obj) {
         //Sub Objects.
-        if (typeof(obj[key]) == 'object') {
+        if (typeof(obj[key]) == 'object') {                       
             if (Array.isArray(obj[key])) {
                 //Arrays.
                 var tag = 'div';
                 var thisItem = document.createElement(tag);
-                thisItem.id = key;
+                thisItem.id = path + '.' + key;
                 dom.appendChild(thisItem);
                 loadObject(thisItem, obj[key], path + '.childNodes.' + key);
             }
@@ -37,7 +62,7 @@ function loadObject(dom, obj, path) {
                     tag = obj[key].tag;
                 }
                 var thisItem = document.createElement(tag);
-                thisItem.id = key;
+                thisItem.id = path + '.' + key;;
                 dom.appendChild(thisItem);
                 loadObject(thisItem, obj[key], path + '.' + key);
             }

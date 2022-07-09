@@ -18,19 +18,20 @@ var model = {
         editBoxName :{
             tag: 'input'
         },
+        p2: {
+            tag: 'p'
+        },
         inputs: [{
-            tag: "button"
+            tag: "button",
+            value: "Whale Hello"
         },{
-            tag: "button"
+            tag: "button",
+            value: "OKAY THEN"
         },{
-            tag: "button"
+            tag: "button",
+            value: "Schweete"
         }]
     }
 }
-
-function loadModel() {
-    buildPage(model);
-}
-
 
 
