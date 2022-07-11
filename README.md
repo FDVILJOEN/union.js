@@ -8,4 +8,4 @@ The html DOM is then emitted and any scripting happens against the javascript ob
 Take a look at the hello world sample to see how it works.
 
 
-![alt text](https://github.com/FDVILJOEN/union.js/blob/main/img/Function.png)
+![alt text](https://fdviljoen.github.io/union.js/img/Function.png)
