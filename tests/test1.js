@@ -11,6 +11,7 @@ var model = {
             tag: "input",
             value: ""
         },
+        p1: {tag: "br"},
         button1: {
             tag: "button",
             value: "Click me",
@@ -18,5 +19,18 @@ var model = {
                 alert('Hello World! - ' + this.user.value);
             }
         }
+    },
+    style: {
+        body: {
+            "font-family": "verdana",
+            color: "red",
+            padding: "8px"
+        },
+        input: {
+            "font-family": "verdana",
+            color: "blue",
+            "border-radius": "10px"
+        }
+
     }
 }

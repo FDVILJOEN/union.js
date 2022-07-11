@@ -53,10 +53,33 @@ function buildPage(obj) {
         }
     }
 
+    //Style
+    if (obj.style) {
+        var styleTag = document.createElement('style');
+        styleTag.id = 'style';
+        document.head.appendChild(styleTag);
+        loadStyle(styleTag, obj.style)
+    }
+
     //Body
     if (obj.body) {
         loadObject(document.body, obj.body, 'topLevel.body');
     }
+}
+
+function loadStyle(dom, style) {
+    var styleStrings = [];    
+    for (const key in style) {
+        if (typeof(style[key]) == 'object') {
+            var toAdd = key + " {";
+            for (const attr in style[key]) {
+                toAdd += attr + ":" + style[key][attr] + ";";
+            }
+            toAdd += "}"
+            styleStrings.push(toAdd);
+        }
+    }
+    dom.innerText = styleStrings.join('\n');
 }
 
 function loadObject(dom, obj, path) {
