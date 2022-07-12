@@ -3,10 +3,9 @@
 
 Union.js moves then centre of web development away from the DOM, and into a Javascript object(s).
 
-The html DOM built by union.js.  Any scripting happens against the javascript object - which is reflected in the DOM as you manipulate the javascript object.
+The html DOM is built by union.js, and any scripting happens against the javascript object.  These changes are then reflected in the DOM as you manipulate the javascript object and vice versa.
 
 Take a look at the hello world sample to see how it works.
-
 
 ![alt text](https://fdviljoen.github.io/union.js/img/Function.png)
 
