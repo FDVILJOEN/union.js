@@ -19,3 +19,8 @@ https://fdviljoen.github.io/union.js/src/union.min.js
 
 Full Source Code:
 https://fdviljoen.github.io/union.js/src/union.js
+
+Here are a few code samples hosted on jsfiddle:
+
+Getting Started guide: https://jsfiddle.net/FrancoisViljoen/zfaxevtd/4/
+
