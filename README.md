@@ -1,5 +1,5 @@
 ## union.js
-..so that we can enjoy developing web content again.
+### Simplified Web Development
 
 Union.js is an attempt at moving the nucleus of web development away from the DOM, and into a simple Javascript object.
 
