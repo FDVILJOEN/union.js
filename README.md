@@ -24,3 +24,5 @@ Here are a few code samples hosted on jsfiddle:
 
 Getting Started guide: https://jsfiddle.net/FrancoisViljoen/zfaxevtd/4/
 
+Working with Arrays of controls: https://jsfiddle.net/FrancoisViljoen/957xkmyq/5/
+
