@@ -3,7 +3,7 @@
 
 Union.js moves then centre of web development away from the DOM, and into a Javascript object(s).
 
-The html DOM is built by union.js, and any scripting happens against the javascript object.  These changes are then reflected in the DOM as you manipulate the javascript object and vice versa.
+The html DOM is built by union.js, and any programmatic changes to the javascript object gets reflected on the DOM. Changes made to the DOM or html page is also reflected back to your javascript object.
 
 Take a look at the hello world sample to see how it works.
 
