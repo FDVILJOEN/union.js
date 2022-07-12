@@ -9,7 +9,7 @@ var model = {
             onClick: function() {
                 this.editBoxName.value = "Hello World!";
                 //this.button1.disabled = true;
-                this.inputs[1].value = "My Donner!";
+                this.inputs[1].value = "Hello";
                 this.inputs.push({tag: "input", value: this.editBoxName.value});                
             } 
         },
@@ -24,13 +24,13 @@ var model = {
         },
         inputs: [{
             tag: "button",
-            value: "Whale Hello"
+            value: "Hello"
         },{
             tag: "button",
-            value: "OKAY THEN"
+            value: "HEN"
         },{
             tag: "button",
-            value: "Schweeter"
+            value: "Sweet"
         }]
     }
 }

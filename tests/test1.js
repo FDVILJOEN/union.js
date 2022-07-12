@@ -15,8 +15,9 @@ var model = {
         button1: {
             tag: "button",
             value: "Click me",
-            onclick: function() {
-                alert('Hello World! - ' + this.user.value);
+            onclick: function(e) {
+                e.head.title = this.user.value;
+                e.style.body.color = "green";
             }
         }
     },

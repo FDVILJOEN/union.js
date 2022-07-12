@@ -30,14 +30,21 @@ var proxyHandler = {
                 loadObject(domObj, obj, obj.domKey);
                 return true;
             }
-            else
-            {
+            else if (obj.domKey == '--head--') {
+                document[prop] = obj[prop];
+            }
+            else {
                 if (prop == 'value') {
                     document.getElementById(obj.domKey).innerText = value;
                 }
                 document.getElementById(obj.domKey)[prop] = value;
                 return true;
             }
+        }
+        else
+        {
+            //Only part without DOM Keys are styling elements.
+            loadStyle(document.getElementById('--style--'), topLevel.style)
         }
     }
 }
@@ -47,6 +54,7 @@ function buildPage(obj) {
 
     //Head
     if (obj.head) {
+        obj.head.domKey = "--head--";
         //Transfer Attributes
         for (const key in obj.head) {
             document[key] = obj.head[key];
@@ -56,7 +64,7 @@ function buildPage(obj) {
     //Style
     if (obj.style) {
         var styleTag = document.createElement('style');
-        styleTag.id = 'style';
+        styleTag.id = '--style--';
         document.head.appendChild(styleTag);
         loadStyle(styleTag, obj.style)
     }
@@ -111,7 +119,7 @@ function loadObject(dom, obj, path) {
         else if (typeof(obj[key]) == 'function') {
             //If key begins with 'on' then we have an event.
             if (key.substring(0, 2) == 'on') {
-                dom.addEventListener(key.substring(2).toLowerCase(), Function(path + '.' + key + '.call(topLevel.body);'));
+                dom.addEventListener(key.substring(2).toLowerCase(), Function(path + '.' + key + '.call(topLevel.body, topLevel);'));
             }
             else
             {
