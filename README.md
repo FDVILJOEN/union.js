@@ -1,7 +1,7 @@
 ## union.js
 ### Simplified Web Development
 
-Union.js is an attempt at moving the nucleus of web development away from the DOM, and into a simple Javascript object.
+Union.js moves then centre of web development away from the DOM, and into a Javascript object(s).
 
 The html DOM built by union.js.  Any scripting happens against the javascript object - which is reflected in the DOM as you manipulate the javascript object.
 
