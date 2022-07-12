@@ -26,3 +26,5 @@ Getting Started guide: https://jsfiddle.net/FrancoisViljoen/zfaxevtd/4/
 
 Working with Arrays of controls: https://jsfiddle.net/FrancoisViljoen/957xkmyq/5/
 
+Updating the page title from union.js:  https://jsfiddle.net/FrancoisViljoen/syneqgdo/5/
+
