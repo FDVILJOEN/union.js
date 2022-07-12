@@ -13,9 +13,10 @@ var viewObj = {
         lblAddress: { tag: 'label', value: 'Delivery Address: ' },
         editDeliveryAddress: { tag: 'input', mapObj: dataObject, mapAttr: 'DeliveryAddress'},
         br3: {tag: 'p'},
-        buttonSave: {tag: 'button', value: 'Update', onclick: function() {
-            //At this point all changes on the HTML page will already be applied to the object.
+        buttonSave: {tag: 'button', value: 'Update', onclick: function(page) {
+            //At this point all changes on the HTML page will already be applied to the data object.
             alert(JSON.stringify(dataObject));
+            page.style.body.color = 'green';
         }}
     },
     style: {
