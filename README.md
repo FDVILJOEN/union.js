@@ -14,10 +14,10 @@ Take a look at the hello world sample to see how it works.
 The links to the latest version are listed below:
 
 Minified version:
-https://fdviljoen.github.io/union.js/src/union.min.js
+[https://fdviljoen.github.io/union.js/src/union.min.js]
 
 Full Source Code:
-https://fdviljoen.github.io/union.js/src/union.js
+[https://fdviljoen.github.io/union.js/src/union.js]
 
 Here are a few code samples hosted on jsfiddle:
 
