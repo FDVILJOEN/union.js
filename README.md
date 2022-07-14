@@ -12,7 +12,7 @@ Take a look at the hello world sample to see how it works.
 
 ## Getting started
 
-The links to the latest version are listed below:
+The links to the latest version of union.js are listed below:
 
 Minified version:
 [https://fdviljoen.github.io/union.js/src/union.min.js]
