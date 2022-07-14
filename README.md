@@ -1,9 +1,8 @@
-## union.js
-### Javascript-First web development
+### Javascript-Centric web development
 
-Union.js moves then centre of web development away from the DOM, and into a Javascript object(s).
+union.js is a small library that allows you to create web content using javascript objects as the primary coding element.  Html and css are emitted from the structure of your javascript objects and everything is kept nicely in sync.  Changes made by users are automatically reflected in your javascript objects, and changes you make to your objects are automatically reflected in html and css.  
 
-All html is emitted by union.js, and any programmatic changes to the javascript object gets reflected on the DOM. Changes made to the DOM or html page is also reflected back to your javascript objects.
+This eliminates the need for document traversal.
 
 Take a look at the hello world sample to see how it works.
 
