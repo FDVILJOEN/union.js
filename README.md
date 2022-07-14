@@ -8,7 +8,7 @@ This eliminates the need for document traversal.
 
 Take a look at the hello world sample to see how it works.
 
-![alt text](https://fdviljoen.github.io/union.js/img/Function.png)
+![alt text](https://www.unionjs.org/img/Function.png)
 
 ## Getting started
 
