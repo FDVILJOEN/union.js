@@ -26,3 +26,4 @@ Here are a few code samples hosted on jsfiddle:
 
 [Updating the page title from union.js](https://jsfiddle.net/FrancoisViljoen/syneqgdo/5/)
 
+[View-Model example](https://www.unionjs.org/tests/viewmodel/default.html)
