@@ -1,5 +1,5 @@
 ## union.js
-### Simplified Web Development
+### Javascript-First web development
 
 Union.js moves then centre of web development away from the DOM, and into a Javascript object(s).
 
