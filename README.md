@@ -6,7 +6,7 @@ union.js is a small library that allows you to create web content using javascri
 
 This eliminates the need for document traversal.
 
-Take a look at the hello world sample to see how it works.
+Take a look at the [Hello World](https://www.unionjs.org/tests/helloworld/helloworld.html) sample to see how it works.
 
 ![alt text](https://www.unionjs.org/img/Function.png)
 
