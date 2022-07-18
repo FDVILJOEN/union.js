@@ -16,7 +16,6 @@ var hello = {
             onclick: function() {
                 alert('Hello ' + this.txtUser.value);
             }
-
         }
     }
 }
