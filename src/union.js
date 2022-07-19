@@ -1,7 +1,7 @@
 //Reference to Object used to build DOM.
 var topLevel;
 
-//Tweo Way Mappings.
+//Two Way Mappings.
 var mappings = []
 
 //Used for Event Handling.
