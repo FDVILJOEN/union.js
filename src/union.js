@@ -7,7 +7,7 @@ var mappings = []
 //Used for Event Handling.
 var proxyHandler = {
     get(target, key) {
-        if (key == 'mapObj')  //Don't wrap map objects in proxy,
+        if (key == 'mapObj')  //Don't wrap map objects in proxy,        
         {
             return target[key];
         }
