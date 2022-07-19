@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="/src/union.js"></script>
+        <script>
+            var myPage = {
+                head: {
+                    title: "Change the tag of an item"
+                },
+                body: {
+                    itema: {
+                        tag: 'input'
+                    },
+                    button: {
+                        tag: 'button',
+                        value: 'click',
+                        onclick: function() {
+                            this.itema.tag = 'button';
+                        }
+                    }
+                }
+
+            }
+        </script>
+    </head>
+    <body onload="buildPage(myPage);">
+
+    </body>
+</html>

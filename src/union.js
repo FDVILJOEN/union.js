@@ -40,7 +40,26 @@ var proxyHandler = {
             else if (obj.domKey == '--head--') {
                 document[prop] = obj[prop];
             }
-            else {
+            else if (prop == 'tag') {
+                //current object in DOM.
+                var currentElement = document.getElementById(obj.domKey);
+                //Create new Object.
+                var newElement = document.createElement(value);
+                newElement.id = currentElement.id;
+
+                //Swop out.
+                currentElement.parentNode.replaceChild(newElement, currentElement);
+
+                //Set Attr from js.
+                loadObject(newElement, obj, newElement.id);
+
+                //Transfer value that may have changed.
+                if (currentElement.value) {
+                    newElement.value = currentElement.value;
+                    newElement.innerText = currentElement.value;
+                }
+
+            } else {
                 if (prop == 'value') {
                     document.getElementById(obj.domKey).innerText = value;
                 }
