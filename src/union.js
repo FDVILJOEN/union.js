@@ -60,10 +60,16 @@ var proxyHandler = {
                 }
 
             } else {
-                if (prop == 'value') {
-                    document.getElementById(obj.domKey).innerText = value;
+                if (obj.subAttr) {
+                    document.getElementById(obj.domKey)[obj.subAttr][prop] = value;
+                } else {
+                    if (prop == 'value') {
+                        document.getElementById(obj.domKey).innerText = value;
+                    }
+                    document.getElementById(obj.domKey)[prop] = value;
                 }
-                document.getElementById(obj.domKey)[prop] = value;
+
+                
                 return true;
             }
         }
@@ -123,7 +129,17 @@ function loadObject(dom, obj, path) {
     for (const key in obj) {
         //Sub Objects.
         if (typeof(obj[key]) == 'object') {
-            if (key != 'mapObj') {
+            if (key == 'style') {
+                //Setting DOM Key.
+                obj[key].domKey = path;
+                obj[key].subAttr = 'style';
+
+                //Inline Styles.
+                for (const styleAttr in obj[key]) {
+                    dom.style[styleAttr] = obj[key][styleAttr];
+                }
+            }
+            else if (key != 'mapObj') {
                 if (Array.isArray(obj[key])) {
                     //Arrays.
                     var tag = 'div';
