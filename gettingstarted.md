@@ -94,7 +94,20 @@ Will lead to this resulting html code:
 
 <img width="301" alt="Screenshot 2022-07-25 at 17 20 16" src="https://user-images.githubusercontent.com/43622111/180826831-cc441458-022e-4bbd-b23b-db5531aff0ff.png">
 
+You will notice that objects get created in html as div objects by default.  To alter the tag, simply add a tag attribute to the javascript object:
 
+```
+var myPageObject = {
+    body: {
+        SectionA: {
+            tag: 'h4'
+        },
+        SectionB: {}
+    }
+}
+```
+
+<img width="288" alt="Screenshot 2022-07-25 at 17 23 07" src="https://user-images.githubusercontent.com/43622111/180827280-b1b18c1c-b882-423c-985e-f2b349215d1a.png">
 
 
 ### style
