@@ -10,7 +10,7 @@ Follow these easy steps to get union.js hooked up and building web content using
 
 The primary hook into the browser is still an html file, so we need a basic, empty file such as this:
 
-'''
+```
 <!DOCTYPE html>
 <html>
     <head>        
@@ -18,6 +18,6 @@ The primary hook into the browser is still an html file, so we need a basic, emp
     <body>
     </body>
 </html>
-'''
+```
 
 
