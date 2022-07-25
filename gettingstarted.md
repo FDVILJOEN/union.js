@@ -22,9 +22,19 @@ The primary hook into the browser is still an html file, so we need a basic, emp
 
 ## 2. Create a link to the union.js script
 
-This is done using a script tag that either links to a local copy of union.js, or to the online version.  
+This is done using a script tag that links to a copy of union.js.  In this case, we are using the online, minified version:
 
 ```
 <script src='https://fdviljoen.github.io/union.js/src/union.min.js'></script>
+```
+
+## 3.  Create your javascript file that will host all other web content
+
+For this example, we will create a file called 'script.js' next to the html page.  Within the script file, we will define one javascript object:
+
+```
+var myPageObject = {
+    
+}
 ```
 
