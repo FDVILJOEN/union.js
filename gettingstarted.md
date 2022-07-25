@@ -20,4 +20,11 @@ The primary hook into the browser is still an html file, so we need a basic, emp
 </html>
 ```
 
+## 2. Create a link to the union.js script
+
+This is done using a script tag that either links to a local copy of union.js, or to the online version.  
+
+```
+<script src='https://fdviljoen.github.io/union.js/src/union.min.js'></script>
+```
 
