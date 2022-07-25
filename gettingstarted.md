@@ -69,8 +69,33 @@ At this point, all of the elements required is hooked up, and now we will focus 
 Similar to a web page, the javascript object has the following optional attributes that union.js looks for:
 
 ### head
+Here is a sample of the head object:
+
+```
+head: {
+        title: 'union.js - getting started sample'
+    },
+```
+Any attributes of the head object, gets applied to the document oibject in html directly, so this is an object that allows you to change aspects of the page such as the title.
 
 ### body
+
+This object is typically made up of attributes that are applied to the html body, together with sub objects that are emited to html as tags withi the body.
+
+For example, adding this body to your javascript object:
+
+```
+body: {
+    SectionA: {},
+    SectionB: {}
+}
+```
+Will lead to this resulting html code:
+
+<img width="301" alt="Screenshot 2022-07-25 at 17 20 16" src="https://user-images.githubusercontent.com/43622111/180826831-cc441458-022e-4bbd-b23b-db5531aff0ff.png">
+
+
+
 
 ### style
 
