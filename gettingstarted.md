@@ -8,7 +8,7 @@ Follow these easy steps to get union.js hooked up and building web content using
 
 ## 1. Create a basic empty html file
 
-The primary hook into the browser is still an html file, so we need a basic, empty file such as this:
+The primary hook into the browser is still an html file, so we need a basic, empty file such as this (default.html in that case) :
 
 ```
 <!DOCTYPE html>
@@ -45,7 +45,22 @@ We then link the script.js file into the html using a script tag.
 We typically do this in the opnload event of the page body so that the complete page has been loaded before we start adding more objects to the DOM.  This is done by adding the following to your body tag in your html file:
 
 ```
-onload="buildPage(myPage);"
+onload="buildPage(myPageObject);"
+```
+
+# To Recap
+After you completed these steps, you should now have two files.  Firstly, an html file with the following code:
+
+```
+<!DOCTYPE html>
+<html>
+    <head>   
+        <script src='https://fdviljoen.github.io/union.js/src/union.min.js'></script>
+        <script src='script.js'></script>
+    </head>
+    <body onload="buildPage(myPageObject);">
+    </body>
+</html>
 ```
 
 
