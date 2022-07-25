@@ -109,8 +109,71 @@ var myPageObject = {
 
 <img width="288" alt="Screenshot 2022-07-25 at 17 23 07" src="https://user-images.githubusercontent.com/43622111/180827280-b1b18c1c-b882-423c-985e-f2b349215d1a.png">
 
+You can now add a value to SectionA, and you should see the following code being rendered:
+
+```
+var myPageObject = {
+    body: {
+        SectionA: {
+            tag: 'h4',
+            value: 'Hello World'
+        },
+        SectionB: {}
+    }
+}
+```
+<img width="585" alt="Screenshot 2022-07-25 at 17 25 20" src="https://user-images.githubusercontent.com/43622111/180827684-174be52d-5523-4502-86d4-c88f562c2c3b.png">
+
+Over here, we add a few items to sectionB, so we have:
+
+```
+var myPageObject = {
+    body: {
+        SectionA: {
+            tag: 'h4',
+            value: 'Hello World'
+        },
+        SectionB: {
+            sampleLabel: {
+                tag: 'label',
+                value: 'This is a sample label'
+            },
+            inputBox: {
+                tag: 'input',
+                value: 'Change this text'
+            },
+            inputButton: {
+                tag: 'button',
+                value: 'then click here.',
+                onclick: function() {
+                    alert('You changed the value to ' + this.SectionB.inputBox.value)
+                }
+            }
+        }
+    }
+}
+```
+
+which then gives you the following web page:
+
+<img width="796" alt="Screenshot 2022-07-25 at 17 32 01" src="https://user-images.githubusercontent.com/43622111/180828914-a976f1ac-6f1d-4592-be8a-7c3b15f71a68.png">
+
+The script in the javascript object works as expected:
+
+<img width="456" alt="Screenshot 2022-07-25 at 17 33 51" src="https://user-images.githubusercontent.com/43622111/180829283-817878fe-6b5a-423b-8037-64ad75afe4d4.png">
+
+
 
 ### style
+Here is an example of how the style object can be used to define global styles within your DOM:
+
+```
+style: {
+        body: {"font-family": "Verdana"},
+        label: {width: '170px', display: 'inline-block'},
+        input: { width: '200px', 'border-radius': '5px', 'border': '1px solid black'}
+    }
+```
 
 
 
