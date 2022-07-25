@@ -1,6 +1,6 @@
 ---
 title: Getting Started with union.js
-layout: template
+layout: Cayman
 filename: gettingstarted.md
 ---
 
