@@ -106,7 +106,14 @@ function buildPage(obj) {
     //Body
     if (obj.body) {
         loadObject(document.body, obj.body, 'topLevel.body');
+
+        if (obj.body.onload) {
+            //Trigger custom onlod.
+            obj.body.onload();
+        }
     }
+
+    
 }
 
 function loadStyle(dom, style) {
