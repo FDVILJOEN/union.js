@@ -38,3 +38,15 @@ var myPageObject = {
 }
 ```
 
+We then link the script.js file into the html using a script tag.
+
+## 4. Call the buildPage function.
+
+We typically do this in the opnload event of the page body so that the complete page has been loaded before we start adding more objects to the DOM.  This is done by adding the following to your body tag in your html file:
+
+```
+onload="buildPage(myPage);"
+```
+
+
+
