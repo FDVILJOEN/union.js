@@ -30,7 +30,7 @@ This is done using a script tag that links to a copy of union.js.  In this case,
 
 ## 3.  Create your javascript file that will host all other web content
 
-For this example, we will create a file called 'script.js' next to the html page.  Within the script file, we will define one javascript object:
+For this example, we will create a file called 'script.js' next to the html page.  Within the script file, we will define a javascript object that will be passed to union.js:
 
 ```
 var myPageObject = {
@@ -62,6 +62,17 @@ After you completed these steps, you should now have two files.  Firstly, an htm
     </body>
 </html>
 ```
+At this point, all of the elements required is hooked up, and now we will focus on the javascript file only.
+
+## 5. Add basic elements to the javascript object.
+
+Similar to a web page, the javascript object has the following optional attributes that union.js looks for:
+
+### head
+
+### body
+
+### style
 
 
 
