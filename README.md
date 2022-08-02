@@ -12,6 +12,8 @@ Take a look at the [Hello World](https://www.unionjs.org/tests/helloworld/hellow
 
 ## Getting started
 
+[Step by step guide](https://www.unionjs.org/gettingstarted.html)
+
 The links to the latest version of union.js are listed below:
 
 Minified version:
